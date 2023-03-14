@@ -1588,7 +1588,6 @@ textarea.input {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #FFF5F7;
-  padding-bottom: 0rem;
 }
 
 .newsletter__body {
@@ -2234,6 +2233,10 @@ textarea.input {
   }
 
   .newsletter {
+    padding-bottom: 0.0000000625rem;
+  }
+
+  .newsletter {
     margin-bottom: 7.5rem;
   }
 
@@ -2441,6 +2444,10 @@ textarea.input {
 
   .newsletter {
     gap: 1.875rem;
+  }
+
+  .newsletter {
+    padding-bottom: 0.0000000625rem;
   }
 
   .newsletter {
@@ -3148,6 +3155,18 @@ textarea.input {
 @supports not (gap: clamp( 1.875rem , 0.275rem  +  8vw , 6.875rem )) {
     .newsletter {
       gap: calc(1.875rem + 5 * (100vw - 20rem) / 62.5);
+    }
+}
+
+@supports (padding-bottom: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem )) {
+    .newsletter {
+      padding-bottom: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem )) {
+    .newsletter {
+      padding-bottom: calc(0.0000000625rem + 0 * (100vw - 20rem) / 62.5);
     }
 }
 
